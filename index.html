@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Xin Gửi Tới Các Bạn Nữ 10 Sinh-ln</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="loader">
+        <div class="cardHover">
+          <div class="inner one" style="--i: 1"></div>
+          <div class="inner two" style="--i: 1"></div>
+          <div class="inner three" style="--i: 1"></div>
+          <div class="box-heart">
+            <div class="heart"></div>
+          </div>
+        </div>
+      </div>
+      <button><p>Nhấn vào đây đi các cậu🖤</p></button>
+      <div class="content">
+        <i class="fa-solid fa-xmark"></i>
+        <h1>Gửi cho các bạn nữ lớp mình!</h1>
+        <p>
+          "Nhân dịp 8/3 mình và các bạn nam khác xin chúc các bạn sẽ có một ngày 8/3 thật là vui vẻ, hạnh phúc.Có thể nhận được nhiều quà, lời chúc tốt đẹp, hoa từ các chàng trai.Trên hết mình xin chúc các bạn trong tình yêu thì có thể sớm tỏ tình thành công có được ty mình mong muốn, còn đối với học tập thì các bạn sẽ càng ngày càng giỏi, học đâu hiểu đó.Kết lại mình mong rằng ngày nào các bạn cũng sẽ luôn vui tươi và hành phúc như hôm nay💕💕💕" 
+        </p>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="app.js"></script>
+  <script>
+    VanillaTilt.init(document.querySelector(".wrapper"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.25,
+      gyroscopeMinAngleX: -45,
+    });
+    var btn = document.querySelector("button");
+    var closeBtn = document.querySelector(".fa-xmark");
+    btn.addEventListener("click", () => {
+      document.querySelector(".wrapper").classList.add("active");
+      btn.style.display = "none";
+    });
+    closeBtn.addEventListener("click", () => {
+      document.querySelector(".wrapper").classList.remove("active");
+      btn.style.display = "block";
+    });
+  </script>
+</html>
